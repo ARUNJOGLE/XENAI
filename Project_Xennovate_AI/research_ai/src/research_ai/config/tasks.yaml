@@ -1,0 +1,233 @@
+research_task:
+  description: >
+    Conduct a thorough research about {topic}
+    Make sure you find any interesting and relevant information given
+    the current year is {current_year}.
+  expected_output: >
+    A list with 10 bullet points of the most relevant information about {topic}
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information.
+  expected_output: >
+    A fully fledged report with the main topics, each with a full section of information.
+    Formatted as markdown without '```'
+  agent: reporting_analyst
+
+methods_analysis_task:
+  description: >
+    Analyze the research reports generated for {topic} and extract the methodologies used.
+    Identify research techniques, frameworks, and approaches applied in the studies.
+    Highlight their strengths, weaknesses, and relevance to {topic}.
+  expected_output: >
+    - **Research Methodologies Used:**
+      - List of methodologies applied in {topic} research.
+      - Summary of each methodology and its core principles.
+
+    - **Comparison of Different Methods:**
+      - Strengths and weaknesses of each methodology.
+      - Effectiveness of methods in relation to {topic}.
+
+    - **Best Practices & Recommendations:**
+      - Identified best practices based on the analysis.
+      - Suggestions for improving research methodologies.
+
+    - **Limitations & Future Considerations:**
+      - Limitations of the applied methodologies.
+      - Recommendations for future research improvements.
+
+  agent: methods_analyst
+
+literature_survey_task:
+  description: >
+    Search academic databases (Google Scholar, Semantic Scholar, ArXiv, IEEE Xplore) for papers related to {topic}.
+    Filter papers based on relevance, keywords, year, and citations.
+    Create summaries for each paper using LLM-based analysis.
+  expected_output: >
+    A comprehensive list of relevant papers with:
+    - Paper metadata (title, authors, year, citations)
+    - Relevance score
+    - LLM-generated summary
+    - Key findings and contributions
+  agent: literature_survey_agent
+
+research_problem_task:
+  description: >
+    Analyze the collected literature to identify research gaps and opportunities.
+    Formulate research questions and hypotheses.
+    Suggest novel angles and unexplored areas.
+  expected_output: >
+    - Identified research gaps
+    - Formulated research questions
+    - Proposed hypotheses
+    - Novel research angles
+  agent: research_problem_formulator
+
+paper_classification_task:
+  description: >
+    Organize papers by topic, method, dataset, and publication type.
+    Apply clustering/classification models.
+    Add metadata for efficient retrieval.
+  expected_output: >
+    - Classified paper categories
+    - Metadata tags
+    - Topic clusters
+    - Search indices
+  agent: paper_classifier
+
+summarization_task:
+  description: >
+    Create short, medium, and long summaries of papers.
+    Extract key contributions, methods, and limitations.
+    Generate comparative summaries.
+  expected_output: >
+    - Multi-level summaries
+    - Key contributions list
+    - Methods overview
+    - Comparative analysis
+  agent: summarization_agent
+
+qa_task:
+  description: >
+    Enable natural language querying over the literature.
+    Answer domain-specific questions.
+    Use RAG + fine-tuned LLM for responses.
+  expected_output: >
+    - Question-answer pairs
+    - Source citations
+    - Confidence scores
+    - Related queries
+  agent: qa_agent
+
+report_generation_task:
+  description: >
+    Generate research reports or reviews.
+    Format according to templates (IEEE, APA, thesis).
+    Create LaTeX or Word content.
+  expected_output: >
+    - Formatted research report
+    - Template-compliant content
+    - Source files (LaTeX/Word)
+  agent: report_generator
+
+data_extraction_task:
+  description: >
+    Extract tables, graphs, and images from PDFs.
+    Convert image plots to CSV.
+    Prepare data for analysis.
+  expected_output: >
+    - Extracted data files
+    - CSV conversions
+    - Image assets
+    - Data documentation
+  agent: data_extractor
+
+timeline_planning_task:
+  description: >
+    Create research milestone schedules.
+    Generate Gantt charts and weekly plans.
+    Track progress on tasks.
+  expected_output: >
+    - Research timeline
+    - Gantt charts
+    - Weekly plans
+    - Progress tracking
+  agent: timeline_planner
+
+experimental_design_task:
+  description: >
+    Suggest datasets, models, and tools.
+    Recommend evaluation metrics.
+    Create experiment workflows.
+  expected_output: >
+    - Experimental design
+    - Dataset recommendations
+    - Evaluation metrics
+    - Workflow documentation
+  agent: experimental_designer
+
+citation_management_task:
+  description: >
+    Generate BibTeX entries.
+    Manage citations and references.
+    Support multiple citation styles.
+  expected_output: >
+    - BibTeX entries
+    - Formatted citations
+    - Reference list
+    - Style guide compliance
+  agent: citation_manager
+
+thesis_structuring_task:
+  description: >
+    Create thesis outline.
+    Fill chapter templates.
+    Ensure logical flow.
+  expected_output: >
+    - Thesis outline
+    - Chapter templates
+    - Structure guide
+    - Flow diagram
+  agent: thesis_structurer
+
+presentation_generation_task:
+  description: >
+    Create research presentations.
+    Design slides with visuals.
+    Export to presentation formats.
+  expected_output: >
+    - Presentation slides
+    - Visual elements
+    - Speaker notes
+    - Export files
+  agent: presentation_generator
+
+translation_task:
+  description: >
+    Translate research content.
+    Maintain technical accuracy.
+    Support multiple languages.
+  expected_output: >
+    - Translated content
+    - Technical glossary
+    - Language pairs
+    - Quality checks
+  agent: multilingual_translator
+
+plagiarism_check_task:
+  description: >
+    Check content originality.
+    Integrate with plagiarism tools.
+    Generate similarity reports.
+  expected_output: >
+    - Originality report
+    - Similarity scores
+    - Source matches
+    - Recommendations
+  agent: plagiarism_checker
+
+knowledge_graph_task:
+  description: >
+    Build research knowledge graphs.
+    Visualize concept relationships.
+    Identify research trends.
+  expected_output: >
+    - Knowledge graph
+    - Concept map
+    - Relationship diagram
+    - Trend analysis
+  agent: knowledge_graph_builder
+
+orchestration_task:
+  description: >
+    Coordinate research tasks.
+    Monitor workflow progress.
+    Handle task dependencies.
+  expected_output: >
+    - Workflow status
+    - Task dependencies
+    - Progress reports
+    - Error handling
+  agent: agent_orchestrator
